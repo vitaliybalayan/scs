@@ -18,7 +18,7 @@ $(document).ready(function() {
 		arrows: false,
 		infinite: false,
 		asNavFor: '.big__slider-dots_container',
-		fade: true
+		fade: true,
 	});
 
 	$('.big__slider-dots_container').slick({
@@ -29,7 +29,30 @@ $(document).ready(function() {
 		centerMode: true,
 		focusOnSelect: true,
 		arrows: false,
-		// infinite: false
+		responsive: [
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+			}
+		},
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				centerMode: false
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+		]
 	});
 
 	$('.main__service-slider-container').slick({
@@ -38,7 +61,30 @@ $(document).ready(function() {
 		centerMode: true,
 		focusOnSelect: true,
 		arrows: false,
-		infinite: true
+		infinite: true,
+		responsive: [
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 4,
+				slidesToScroll: 2,
+			}
+		},
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+		]
 	});
 
 	$(".parallelogram__content-slider").owlCarousel({
@@ -46,6 +92,18 @@ $(document).ready(function() {
 		nav: true,
 		loop: true,
 		navElement: 'div class="custom_button-nav"',
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+			},
+			600:{
+				items:1,
+			},
+			1000:{
+				items:1,
+			}
+		}
 	});
 
 	$(".f__c-section_first-slider").owlCarousel({
@@ -54,6 +112,18 @@ $(document).ready(function() {
 		nav: true,
 		loop: true,
 		navElement: 'div class="custom_button-nav owl_footer__slider"',
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+			},
+			600:{
+				items:1,
+			},
+			1000:{
+				items:1,
+			}
+		}
 	});
 
 })
@@ -77,3 +147,29 @@ $(document).mouseup(function (e) {
         container.removeClass('active');
     }
 });
+
+function showBlock(str) {
+	
+	var block = $('[data-tab]');
+	var tab_block = $('[data-tab_block='+ str +']');
+
+	$('.tab_block').removeClass('active'); 
+	block.hide();
+
+
+	tab_block.addClass('active');
+	$('[data-tab='+ str +']').show();
+
+}
+
+function showMobileMenu() {
+	
+	var menu_content = $('.mobile-menu_block');
+
+	if (menu_content.hasClass('active')) {
+		menu_content.removeClass('active');
+	} else {
+		menu_content.addClass('active');
+	}
+
+}

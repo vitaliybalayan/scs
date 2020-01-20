@@ -12,7 +12,7 @@
 
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -51,6 +51,40 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Mobile menu -->
+		<div class="nav-menu_mobile">
+			<div class="g-content">
+				<div class="nav-menu_mobile-content col-2">
+					
+					<div class="nav-menu_mobile-logotype">
+						<a href="#">
+							<img src="img/logo.svg" alt="SCS">
+						</a>
+					</div>
+					<div class="nav-menu_mobile-hamburger">
+						
+						<div class="menu_hamburger-button" onclick="showMobileMenu();">
+							<span class="menu_hamburder-icon"></span>
+						</div>
+
+						<div class="mobile-menu_block">
+							<a href="#">Услуги</a>
+							<a href="#">O SCS</a>
+							<a href="#">Сертификация</a>
+							<a href="#">Наши клиенты</a>
+							<a href="#">Новости</a>
+							<a href="#">Контакты</a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- Mobile menu -->
+
+		<!-- Main menu -->
 		<div class="nav-menu">
 			<div class="g-content">
 				<div class="nav-menu__content">
@@ -72,12 +106,12 @@
 				</div>
 			</div>
 		</div>
+		<!-- Main menu -->
 
 	</header>
 
 	<section class="big__slider">
 		<div class="big__slider-container">
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
@@ -93,7 +127,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
@@ -109,7 +142,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
@@ -125,7 +157,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
@@ -141,7 +172,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
@@ -157,35 +187,26 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
-
 		<div class="big__slider-dots">
 			<div class="big__slider-dots_container">
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Вкусно накормим</div>
 				</div>
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Поддержим порядок</div>
 				</div>
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Создадим чистоту</div>
 				</div>
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Наладим работу систем</div>
 				</div>
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Предоставим работников</div>
 				</div>
-
 			</div>
 		</div>
-
 	</section>
 
 	<section class="fullframe__images">
@@ -378,7 +399,7 @@
 				<div class="video__container inline-middle">
 					<div class="video__title">Видео о SCS</div>
 					<div class="video__icon">
-						<div class="video__icon-block">
+						<div class="video__icon-block pulse">
 							<img src="/img/icons/play.svg" alt="Посмотреть">
 						</div>
 					</div>
@@ -448,12 +469,16 @@
 							<div class="footer__address">
 								
 								<div class="footer__address-head inline-middle">
-									<a href="#" class="active">Офис в Актау</a>
-									<a href="#">Офис в Атырау</a>
+									<a href="javascript:void(0)" class="tab_block active" data-tab_block="aktau_address" onclick="showBlock('aktau_address');">Офис в Актау</a>
+									<a href="javascript:void(0)" class="tab_block" data-tab_block="atyrau_address" onclick="showBlock('atyrau_address');">Офис в Атырау</a>
 								</div>
 
-								<div class="footer__address-content" id="f__a-content">
+								<div class="footer__address-content active" id="f__a-content" data-tab="aktau_address">
 									130000, Казахстан, Мангистауская обл., микрорайон 10, дом 2, офис 2
+								</div>
+
+								<div class="footer__address-content" id="f__a-content" data-tab="atyrau_address">
+									130000, Казахстан, Атырауская обл., микрорайон 10, дом 2, офис 2
 								</div>
 
 							</div>
@@ -461,7 +486,7 @@
 						</div>
 						<div class="footer__foo">
 							<div class="col-2">
-								<a href="#">Developers</a>
+								<a href="https://parallax.pro">PARALLAX.PRO</a>
 								<a href="#">office@s-c-s.kz</a>
 							</div>
 						</div>

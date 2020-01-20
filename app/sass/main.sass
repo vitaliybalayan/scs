@@ -46,6 +46,7 @@ body
 	background: #005B96
 	padding: 0
 	margin: 0
+	appearance: none
 
 ::selection
 	background-color: $accent
@@ -284,38 +285,19 @@ a.stadrt__button.green:before
 		content: ''
 		position: absolute
 		width: 100%
-		height: 88px
+		height: 100%
 		background: linear-gradient(90deg, #71CAF3 0%, #BBCF33 100%)
 		bottom: 0
 		z-index: 1
 		opacity: 0.7
-
-.big__slider-dots_container
-	z-index: 2
 
 .big__slider
 	position: relative
-
-.big__slider-dots
-	position: absolute
-	left: 0
-	right: 0
-	bottom: 0
-	&:after
-		content: ''
-		position: absolute
-		width: 100%
-		height: 88px
-		background: linear-gradient(90deg, #71CAF3 0%, #BBCF33 100%)
-		bottom: 0
-		z-index: 1
-		opacity: 0.7
 
 .big__slider-dots_container
 	z-index: 2
 
 .big__slider-dot_title
-	// color: #005B96
 	color: white
 	font-weight: 300
 	font-size: 20px
@@ -331,7 +313,6 @@ a.stadrt__button.green:before
 	width: 64px
 	height: 1px
 	background: white
-	// background: #005B96
 	margin-bottom: 12px
 
 .big__slider-dot_item
@@ -611,12 +592,12 @@ p
 	font-size: 30px
 	font-weight: 900
 	color: #005B96
-	top: 50%
+	top: 45%
 	transform: translate(0, -50%)
 
 .video__icon-block
 	position: absolute
-	top: 50%
+	top: 45%
 	left: 50%
 	transform: translate(-50%, -50%)
 	width: 200px
@@ -780,11 +761,14 @@ p
 			margin-right: 0
 
 .footer__address-content
+	display: none
 	margin-top: 15px
 	font-weight: 300
 	font-size: 14px
 	line-height: 22px
 	color: white
+	&.active
+		display: block
 
 .footer__foo
 	margin-top: 25px
@@ -839,5 +823,72 @@ p
 
 .main__service-slider-footer
 	margin-top: 50px
+
+.pulse
+	cursor: pointer
+	box-shadow: 0 0 0 rgba(0, 91, 150, 0.25)
+	animation: pulse 2s infinite
+
+@keyframes pulse
+	0%
+		box-shadow: 0 0 0 0 rgba(0, 91, 150, 0.25)
+	70%
+		box-shadow: 0 0 0 50px rgba(0, 91, 150, 0)
+	100%
+		box-shadow: 0 0 0 0 rgba(0, 91, 150, 0)
+
+.nav-menu_mobile, .mobile-menu_block
+	display: none
+
+.mobile-menu_block.active
+	display: block
+
+.nav-menu_mobile
+	position: relative
+	background: white
+	padding: 20px 72px
+
+.menu_hamburger-button
+	position: absolute
+	width: 90px
+	height: 90px
+	background: #005B96
+	top: 0
+	right: 0
+	cursor: pointer
+	transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1)
+
+.nav-menu_mobile-logotype a
+	display: block
+	line-height: 0
+
+.menu_hamburder-icon
+	display: inline-block
+	width: 90px
+	height: 90px
+	background: url('/img/icons/hamburger.svg') 50% no-repeat
+	background-size: 40px
+
+.menu_hamburger-button:hover
+	background: #71CAF3
+
+.mobile-menu_block
+	position: absolute
+	top: 90px
+	left: 0
+	right: 0
+	height: 100vh
+	background: rgba(255, 255, 255, 0.9)
+	padding: 30px 0
+	text-align: center
+	a
+		display: block
+		font-size: 22px
+		font-weight: bold
+		color: #015B96
+		padding: 20px 0
+		&:hover
+			color: #71CAF3
+			text-decoration: underline
 
 @import "media" // Всегда в конце

@@ -8,23 +8,220 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+@media only screen and (max-width : 970px)
+	.g-content
+		width: 100%
+	.nav-menu__content:after
+		transform: none
+	.main__service-slider-item
+		margin: 0 -30px
+		clip-path: polygon(20% 0,100% 0,80% 100%,0 100%)
 
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	/**/
+@media only screen and (max-width : 750px)
+	.container
+		width: 750px
+		padding: 0 40px
+	.nav-menu
+		display: none
+	.nav-menu_mobile
+		display: block
+	.big__slider-content_container
+		padding: 0 32px
+		width: 80%
+	.big__slider-dots_container, .fullframe-section
+		padding: 0 72px
+	.col-2_top>*
+		width: 100%
+	.parallelogram__item.first .parallelogram-item__content:after
+		background: url(/img/backgrounds/rectangle_1-mobile.svg) no-repeat
+		width: 100%
+	.parallelogram-item__content, .f__c-section_f-slider__item
+		padding-left: 72px
+	.footer__custom-section_first-container
+		grid-template-columns: 1fr
+	.owl-stage-outer
+		width: 90vw
+	.f__c-section_f-slider__item
+		width: 100%
+	.f__c-section_first-slider .owl-nav
+		padding-right: 7px
+	.f__c-section_first-slider .owl-nav span:after
+		transform: skewX(-9deg)
+	.footer__custom-section
+		margin-top: -50px
+	.f__c-section_second-title h4
+		background: transparent
+		color: white
+	.f__c-section_second-content
+		width: 100%
+		padding: 50px 75px
+		right: 0
+		left: unset
+		clip-path: polygon(5.5% 0, 100% 0, 100% 100%, 0 100%)
+	.f__c-s_s-c__content
+		max-width: 100%
+		margin-bottom: 20px
+		font-size: 16px
+	.f__c-s_s-c__title
+		margin-bottom: 20px
+	.main__index-page__footer
+		padding-top: 660px
+		.col-2
+			grid-template-columns: 1fr 0.7fr
+	.footer__block-logo_item
+		margin-left: 25px
+		line-height: 0
+	.parallelogram__item.first h4
+		margin-left: 72px
+	.footer__custom-section
+		margin-top: -50px
+	.f__c-section_second-title h4
+		background: transparent
+		color: white
+	.f__c-section_second-content
+		width: 100%
+		padding: 50px 75px
+		right: 0
+		left: unset
+		clip-path: polygon(5.5% 0, 100% 0, 100% 100%, 0 100%)
+	.f__c-s_s-c__content
+		max-width: 100%
+		margin-bottom: 20px
+		font-size: 16px
+	.f__c-s_s-c__title
+		margin-bottom: 20px
+	.main__index-page__footer
+		padding-top: 660px
+		.col-2
+			grid-template-columns: 1fr 0.7fr
+	.footer__block-logo_item
+		margin-left: 25px
+		line-height: 0
+	.parallelogram__content-block h1
+		width: 100%
+	.parallelogram-item__content
+		max-width: 750px
+	.stock_blue-p
+		max-width: 360px
+	.parallelogram__item.second
+		.parallelogram-item__content
+			top: 90px
+			min-height: 471px
+			h4
+				margin-top: 40px
+	.parallelogram__content-block
+		padding-right: 70px
+	.section-title__hightlight
+		padding: 70px 90px 30px 72px
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.nav-menu_mobile
+		padding: 20px 35px
+	.container
+		width: 100%
+		padding: 0 35px
+	.big__slider-content_container
+		padding: 0
+	.big__slider-dots_container, .fullframe-section
+		padding: 0
+	.parallelogram-item__content
+		max-width: 100vw
+	.fullframe-section
+		.col-5
+			grid-template-columns: 1fr 1fr
+		.gap-30
+			grid-gap: 0
+	.ff-images__block
+		padding: 10px 0
+	.fullframe-section
+		padding-top: 10px
+		padding-bottom: 10px
+	.section-advan__container .col-4
+		grid-template-columns: 1fr 1fr
+	.section-title__hightlight
+		padding: 70px 90px 30px 35px
+	.parallelogram__item.first .parallelogram-item__content:after
+		background: white
+	.f__c-section_f-slider__item, .parallelogram-item__content
+		padding-left: 35px
+	.parallelogram__item.first h4
+		margin-left: 35px
+	.parallelogram__content
+		padding-top: 40px
+	.main__service-slider
+		margin-top: 141px
+	.main__index-page__footer
+		padding-top: 720px
+		padding-bottom: 150px
+		> div > .col-2
+			grid-template-columns: 1fr
+	.footer__block-logotypes
+		bottom: -120px
+	.video__icon-block
+		width: 150px
+		height: 150px
+		padding-top: 47px
+		right: 0
+		left: unset
+		img
+			height: 50px
+	.video__title
+		font-size: 28px
+	.col-2_top > *
+		width: 100%
+	.parallelogram__item.second
+		h4
+			margin-left: 35px
+			margin-top: 50px
+		.parallelogram-item__content
+			top: 100px
+			padding-left: 35px
+			&:after
+				background: #E4F2FC
+	.main__service-slider-item
+		padding: 30px 90px
+		margin: 0 -45px
+		clip-path: polygon(15% 0,100% 0,85% 100%,0 100%)
+	.f__c-section_second-content
+		clip-path: none
+		padding: 50px 35px
+	.f__c-section_first-slider
+		&:after
+			clip-path: none
+		.owl-nav
+			padding-right: 0
 
+@media only screen and (max-width : 400px)
+	.big__slider-title
+		font-size: 40px
+		line-height: 40px
+	.parallelogram__item.second .parallelogram__content-block
+		padding-right: 70px
+	.fullwidht_video
+		min-height: 250px
+	.video__title
+		font-size: 22px
+	.video__icon-block
+		width: 120px
+		height: 120px
+		padding-top: 37px
+		border: 3px solid #005b96
+		top: 40%
+		padding-left: 7px
+		img
+			height: 40px
+	.footer__phone
+		font-size: 18px
+		margin-left: 20px
+		.hightlight
+			font-size: 21px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
 
 
 /*==========  Mobile First  ==========*/
