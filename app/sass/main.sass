@@ -1,0 +1,450 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	outline: none
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	position: relative
+	min-width: 320px
+	font-family: $default-font
+	overflow-x: hidden
+	background: #005B96
+	padding: 0
+	margin: 0
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.fixed-header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 9999
+
+.inline-middle > *
+	display: inline-block
+	vertical-align: middle
+
+.container
+	width: 782px
+	margin: 0 auto
+
+.c-container
+	width: 1024px
+	margin: 0 auto
+
+.fullframe__images
+	background: white
+
+.blue__content
+	background: #005B96
+
+a
+	text-decoration: none
+
+.top-header
+	background: rgba(0, 91, 150, 0.75)
+	color: white
+	font-size: 10px
+	line-height: 100%
+	a
+		color: white
+		text-transform: uppercase
+		padding: 5px 0 5px
+		line-height: 0
+
+.dropdown-default__value
+	background: rgba(255, 255, 255, 0.2)
+	padding: 5px 9px 7px
+	cursor: pointer
+	span
+		margin-right: 3px
+
+.top-h_link
+	margin-left: 18px
+
+.top-header__content
+	text-align: right
+
+.dropdown-_value
+	display: none
+	position: absolute
+	background: rgba(0, 0, 0, 0.5)
+	width: 100%
+	text-align: center
+	z-index: 2
+	a
+		display: block
+		padding: 10px 0
+		&:hover
+			background: rgba(0, 0, 0, 0.5)
+
+.top-h_dropdown__menu
+	position: relative
+
+
+.big__slider-item
+	height: 616px
+
+.big__slider-content_container
+	position: absolute
+	top: 50%
+	z-index: 99
+	width: 376px
+	transform: translate(0, -50%)
+	color: white
+
+.big__slider-title
+	font-size: 50px
+	line-height: 50px
+	font-weight: bold
+
+.big__slider-content
+	font-size: 14px
+	line-height: 20px
+	margin: 24px 0
+	font-weight: 300
+
+.stadrt__button
+	position: relative
+	display: inline-block
+	text-transform: uppercase
+	letter-spacing: 0.3em
+	padding: 8px 16px 7px
+	font-weight: bold
+	font-size: 10px
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		transform: skew(170deg)
+		z-index: -1
+
+
+a.stadrt__button.green:before
+	background: #BBCF33
+
+
+.stadrt__button.green
+	color: white
+	&:after
+		content: ''
+		display: inline-block
+		background-image: url('../img/icons/arrow_button.svg')
+		width: 24px
+		height: 8px
+		margin-left: 12px
+		transition: 0.2s ease-in-out
+	&:hover:after
+		margin-left: 20px
+
+.text__button
+	position: relative
+	display: inline-block
+	text-transform: uppercase
+	letter-spacing: 0.3em
+	font-weight: bold
+	font-size: 10px
+	&.green
+		color: #BBCF33
+		&:after
+			content: ''
+			display: inline-block
+			background-image: url('../img/icons/arrow-green.svg')
+			width: 24px
+			height: 8px
+			margin-left: 12px
+			transition: 0.2s ease-in-out
+		&:hover:after
+			margin-left: 20px
+	&[data-size='middle']
+		font-size: 18px
+		letter-spacing: 0.07em
+		line-height: 22px
+
+.col-a_1
+	display: grid
+	grid-template-columns: auto 1fr
+
+.col-2
+	display: grid
+	grid-template-columns: 1fr 1fr
+
+.col-2_top
+	&> *
+		display: inline-block
+		vertical-align: top
+		width: 49%
+
+.nav-menu__content
+	position: relative
+	padding: 19px 0
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		transform: skew(170deg)
+		background: white
+		z-index: -1
+
+.g-content
+	width: 1024px
+	margin: 0 auto
+
+.menu__list
+	text-align: right
+	a
+		position: relative
+		display: inline-block
+		color: #005B96
+		margin-left: 32px
+		font-size: 13px
+		font-weight: bold
+		padding: 17px 0
+
+.logotype
+	line-height: 0
+	img
+		height: 50px
+
+.menu__list a
+	&:hover:before
+		content: ''
+		display: block
+		position: absolute
+		background: #005B96
+		height: 2px
+		width: 100%
+		bottom: 7px
+		transform: skew(150deg)
+
+.big__slider
+	position: relative
+
+.big__slider-dots
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 88px
+		background: linear-gradient(90deg, #71CAF3 0%, #BBCF33 100%)
+		bottom: 0
+		z-index: 1
+		opacity: 0.7
+
+.big__slider-dots_container
+	z-index: 2
+
+.big__slider
+	position: relative
+
+.big__slider-dots
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 88px
+		background: linear-gradient(90deg, #71CAF3 0%, #BBCF33 100%)
+		bottom: 0
+		z-index: 1
+		opacity: 0.7
+
+.big__slider-dots_container
+	z-index: 2
+
+.big__slider-dot_title
+	// color: #005B96
+	color: white
+	font-weight: 300
+	font-size: 20px
+
+.slick-current .big__slider-dot_line
+	height: 3px
+	border-radius: 100px
+	background: #BBCF33
+	margin-bottom: 10px
+
+.big__slider-dot_line
+	display: block
+	width: 64px
+	height: 1px
+	background: white
+	// background: #005B96
+	margin-bottom: 12px
+
+.big__slider-dot_item
+	padding: 25px 0 26px
+
+.col-5
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+
+.gap-30
+	grid-gap: 30px
+
+.ff-images__block
+	padding: 17px 0 13px
+	text-align: center
+	a
+		display: inline-block
+		line-height: 0
+		img
+			height: 22px
+
+.parallelogram__content
+	margin-top: 78px
+
+.parallelogram-item__title h4
+	text-transform: uppercase
+	font-weight: 300
+
+.parallelogram__content-block h1
+	font-size: 40px
+	color: #005B96
+	width: 110%
+	margin: 0 0 20px
+	line-height: 40px
+
+.parallelogram-item__content
+	padding-left: 110px
+	padding-top: 50px
+	padding-bottom: 45px
+p
+	margin: 0
+	&[data-size="middle"]
+		font-size: 18px
+		line-height: 22px
+	&[data-size="normal"]
+		font-size: 14px
+		line-height: 22px
+
+[data-font_weight="light"]
+	font-weight: 300
+
+[data-font_weight="bold"]
+	font-weight: bold
+
+.parallelogram__item.first .parallelogram-item__content:after
+	content: ''
+	display: block
+	position: absolute
+	top: 0
+	left: 0
+	width: 616px
+	height: 100%
+	background: url('/img/backgrounds/rectangle_1.svg') no-repeat
+    background-position-y: 0
+    background-size: 100%
+	z-index: 1
+
+.parallelogram-item__content
+	position: relative
+
+.parallelogram__content-block
+	position: relative
+	z-index: 2
+
+.parallelogram-links
+	margin-top: 40px
+
+.bigger_count > div
+	display: inline-block
+	vertical-align: bottom
+
+.bigger__number
+	font-size: 140px
+	font-weight: 900
+	line-height: 95%
+
+.bigger__text
+	font-size: 40px
+	font-weight: 900
+
+.bigger_count
+	color: #005B96
+	margin-bottom: 15px
+
+.stock_blue-p
+	font-size: 24px
+	color: #005B96
+	font-weight: 300
+
+.parallelogram__item.second .parallelogram-item__content
+	top: 65px
+	padding-left: 150px
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: url(/img/backgrounds/rectangle_2.svg) 50% no-repeat
+		background-size: 100%
+		background-position-y: 0
+
+.parallelogram__content-block h5
+	text-transform: uppercase
+	font-size: 18px
+	margin: 30px 0 15px
+	line-height: 22px
+	letter-spacing: 0.07em
+	color: #71caf3
+
+.parallelogram__item.second .parallelogram__content-block
+  padding-right: 110px
+
+@import "media" // Всегда в конце
