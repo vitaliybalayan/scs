@@ -32,20 +32,28 @@ $(document).ready(function() {
 		// infinite: false
 	});
 
-	// $('.parallelogram__content-slider').slick({
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	centerMode: true,
-	// 	focusOnSelect: true,
-	// 	arrows: true,
-	// 	infinite: true
-	// });
+	$('.main__service-slider-container').slick({
+		slidesToShow: 5,
+		dots: false,
+		centerMode: true,
+		focusOnSelect: true,
+		arrows: false,
+		infinite: true
+	});
 
 	$(".parallelogram__content-slider").owlCarousel({
 		items: 1,
 		nav: true,
 		loop: true,
-		navElement: 'div class="custom_button"',
+		navElement: 'div class="custom_button-nav"',
+	});
+
+	$(".f__c-section_first-slider").owlCarousel({
+		items: 1,
+		dots: false,
+		nav: true,
+		loop: true,
+		navElement: 'div class="custom_button-nav owl_footer__slider"',
 	});
 
 })

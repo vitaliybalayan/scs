@@ -74,7 +74,12 @@ body
 	background: white
 
 .blue__content
-	background: #005B96
+	background-color: #005b96
+	background-image: url(/img/backgrounds/decor_lines.svg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: right
+	z-index: 1
 
 a
 	text-decoration: none
@@ -150,6 +155,7 @@ a
 	padding: 8px 16px 7px
 	font-weight: bold
 	font-size: 10px
+	z-index: 1
 	&:before
 		content: ''
 		position: absolute
@@ -188,15 +194,20 @@ a.stadrt__button.green:before
 	&.green
 		color: #BBCF33
 		&:after
-			content: ''
-			display: inline-block
 			background-image: url('../img/icons/arrow-green.svg')
-			width: 24px
-			height: 8px
-			margin-left: 12px
-			transition: 0.2s ease-in-out
-		&:hover:after
-			margin-left: 20px
+	&.white
+		color: white
+		&:after
+			background-image: url('../img/icons/arrow_button.svg')
+	&:after
+		content: ''
+		display: inline-block
+		width: 24px
+		height: 8px
+		margin-left: 12px
+		transition: 0.2s ease-in-out
+	&:hover:after
+		margin-left: 20px
 	&[data-size='middle']
 		font-size: 18px
 		letter-spacing: 0.07em
@@ -343,7 +354,7 @@ a.stadrt__button.green:before
 			height: 22px
 
 .parallelogram__content
-	margin-top: 78px
+	padding-top: 78px
 
 .parallelogram-item__title h4
 	text-transform: uppercase
@@ -374,6 +385,12 @@ p
 
 [data-font_weight="bold"]
 	font-weight: bold
+
+[data-text_align="right"]
+	text-align: right
+
+[data-text_align="left"]
+	text-align: left
 
 .parallelogram__item.first .parallelogram-item__content:after
 	content: ''
@@ -421,8 +438,9 @@ p
 	font-weight: 300
 
 .parallelogram__item.second .parallelogram-item__content
-	top: 65px
+	top: 130px
 	padding-left: 150px
+	min-height: 500px
 	&:after
 		content: ''
 		display: block
@@ -445,6 +463,381 @@ p
 	color: #71caf3
 
 .parallelogram__item.second .parallelogram__content-block
-  padding-right: 110px
+	padding-right: 110px
+	padding-top: 20px
+
+.custom_button-nav
+	display: inline-block
+	margin: 0 1px
+	span
+		position: relative
+		font-size: 0
+		display: inline-block
+		padding: 32px 27px
+		min-width: 85px
+	&.owl-prev span:before
+		background: url('/img/icons/arrow_left-white.svg') 50% no-repeat
+	&.owl-next span:before
+		background: url('/img/icons/arrow_right-white.svg') 50% no-repeat
+	span
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			height: 100%
+			background: #BBCF33
+			transform: skewX(-10deg)
+			margin: 0 1px
+			top: 0
+			left: 0
+			z-index: -1
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			width: 30px
+			height: 8px
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+.parallelogram__content-slider .owl-nav
+	position: absolute
+	bottom: -114px
+	right: 50px
+
+.parallelogram__item
+	&.first h4
+		margin-left: 110px
+		color: #71CAF3
+	&.second h4
+		position: absolute
+		margin-left: 140px
+		margin-top: 90px
+		color: #BBCF33
+	h4
+		font-size: 18px
+		line-height: 22px
+
+.main__service-slider
+	margin-top: 150px
+	padding-bottom: 115px
+
+.custom-section__title h4
+	font-size: 18px
+	line-height: 22px
+	color: #71CAF3
+	font-weight: 300
+	text-transform: uppercase
+	letter-spacing: 0.1em
+	margin: 0 0 30px
+
+.main__service-slider-item
+	width: 230px
+
+.col-4
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr
+
+.gap-30
+	grid-gap: 30px
+
+.section-advan__item-title
+	font-size: 20px
+	font-weight: bold
+	color: #005B96
+	margin: 15px 0 10px
+
+.section-advan__item-image img
+	display: block
+
+.advantages
+	position: relative
+	background-color: white
+	background-image: url('/img/backgrounds/advan_back.svg')
+	background-repeat: no-repeat
+	background-size: 100% auto
+
+.section-advan__item-desc
+	font-size: 14px
+	color: #005B96
+	font-weight: 300
+
+.section-advan__container
+	padding: 130px 0 50px
+
+.section-title__hightlight
+	position: absolute
+	padding: 70px 90px 30px 230px
+	text-align: right
+	top: -40px
+	left: 0
+	z-index: 1
+	h4
+		margin: 0
+		font-weight: 300
+		font-size: 18px
+		line-height: 22px
+		letter-spacing: 0.1em
+		text-transform: uppercase
+		color: #005B96
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		background: linear-gradient(290.53deg, #9CE0FF 3.66%, #D7ED76 92.19%)
+		top: 0
+		left: -10px
+		transform: skewX(-10deg)
+		z-index: -1
+
+.fullwidht_video
+	position: relative
+	min-height: 475px
+	a
+		position: absolute
+		display: block
+		height: 100%
+		left: 0
+		right: 0
+		top: 0
+		.video__container
+			padding-top: 200px
+
+.video__title
+	position: absolute
+	font-size: 30px
+	font-weight: 900
+	color: #005B96
+	top: 50%
+	transform: translate(0, -50%)
+
+.video__icon-block
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 200px
+	height: 200px
+	text-align: center
+	padding-top: 65px
+	border: 4px solid #005B96
+	border-radius: 100%
+	padding-left: 10px
+
+
+.footer__custom-section_first-container
+	display: grid
+	grid-template-columns: 600px auto
+
+.f__c-s_f-s__item-title
+	font-size: 24px
+	line-height: 170%
+	color: #005B96
+
+.f__c-section_f-slider__item
+	padding-left: 102px
+	padding-top: 50px
+	width: 530px
+
+.f__c-s_f-s__item-title h2
+	margin: 0 0 20px
+	font-weight: 900
+
+.f__c-s_f-s__item-subtitle
+	letter-spacing: 0.07em
+	text-transform: uppercase
+	font-weight: bold
+	font-size: 16px
+	line-height: 22px
+	color: #71CAF3
+	margin-bottom: 20px
+
+.f__c-s_f-s__item-content
+	font-weight: 300
+	font-size: 14px
+	line-height: 22px
+	margin: 20px 0
+	color: #4D4D4D
+	max-width: 400px
+
+.f__c-section_first-slider
+	padding-right: 40px
+	.owl-nav
+		text-align: right
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		background: white
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -2
+		clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%)
+	.owl-nav span:after
+		transform: skewX(-6deg)
+
+.f__c-section_second-content
+	position: relative
+	padding: 84px 98px 60px 92px
+	color: #FFFFFF
+	clip-path: polygon(8.3% 0, 100% 0, 100% 100%, 0 100%)
+	left: -48px
+	width: 470px
+	margin-top: 82px
+
+.f__c-s_s-c__title
+	font-weight: 800
+	font-size: 40px
+	line-height: 40px
+	margin-bottom: 30px
+
+.f__c-s_s-c__content
+	font-weight: 300
+	font-size: 14px
+	line-height: 22px
+	max-width: 150px
+	margin-bottom: 30px
+
+.f__c-section_second-title h4
+	position: absolute
+	padding: 30px 50px
+	background: rgba(255, 255, 255, 0.65)
+	margin: 0
+	clip-path: polygon(0.45% 0, 100% 0, 100% 100%, 0 100%)
+	left: -10px
+	z-index: 1
+	width: 100vw
+	font-weight: 300
+	font-size: 18px
+	line-height: 22px
+	letter-spacing: 0.1em
+	text-transform: uppercase
+	color: #005B96
+
+.footer__custom-section_second
+	position: relative
+
+.footer__custom-section
+	position: absolute
+	left: 0
+	right: 0
+	margin-top: -82px
+
+.main__index-page__footer
+	 padding-top: 325px
+
+.main__footer
+	background-color: #003353
+	background-image: url('/img/backgrounds/footer_lines.svg')
+	background-repeat: no-repeat
+	background-size: cover
+	padding-bottom: 75px
+
+.footer__phone
+	font-weight: 300
+	font-size: 25px
+	line-height: 14px
+	color: white
+	margin-left: 35px
+	.hightlight
+		font-weight: 900
+		font-size: 35px
+		line-height: 14px
+	img
+		margin-left: 10px
+
+.footer__head
+	margin-bottom: 30px
+
+.col-a_a
+	display: grid
+	grid-template-columns: auto auto
+
+.footer_copyrite
+	color: white
+	font-size: 14px
+	font-weight: 300
+
+.gap-50
+	grid-gap: 50px
+
+.footer__address-head a
+	font-weight: 900
+	font-size: 14px
+	line-height: 14px
+	color: white
+	opacity: 0.4
+	text-decoration: underline
+	margin-right: 15px
+	&.active
+		opacity: 1
+	&:last-child
+			margin-right: 0
+
+.footer__address-content
+	margin-top: 15px
+	font-weight: 300
+	font-size: 14px
+	line-height: 22px
+	color: white
+
+.footer__foo
+	margin-top: 25px
+	a
+		font-weight: 900
+		font-size: 14px
+		line-height: 14px
+		color: white
+		text-decoration: underline
+
+.footer__block-logotypes
+	position: absolute
+	text-align: right
+	left: 0
+	right: 0
+	bottom: 0
+
+.footer__block-logo_item
+	margin-left: 30px
+
+.footer__block
+	position: relative
+
+.main__service-slider-item
+	clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%)
+	margin: 0 -20px
+	padding: 30px 70px
+	color: white
+	min-height: 400px
+
+.main__service-slider-title
+	font-weight: bold
+	font-size: 18px
+	line-height: 24px
+	max-width: 150px
+	margin-bottom: 20px
+	&:after
+		content: ''
+		display: block
+		width: 40px
+		height: 2px
+		border-radius: 100px
+		background: white
+		margin-top: 25px
+
+.main__service-slider-subtitle
+	font-size: 14px
+	line-height: 15px
+	letter-spacing: 0.05em
+	text-transform: uppercase
+	color: #FFFFFF
+
+.main__service-slider-footer
+	margin-top: 50px
 
 @import "media" // Всегда в конце
