@@ -456,6 +456,7 @@ p
 		display: inline-block
 		padding: 32px 27px
 		min-width: 85px
+		z-index: 1
 	&.owl-prev span:before
 		background: url('/img/icons/arrow_left-white.svg') 50% no-repeat
 	&.owl-next span:before
@@ -483,10 +484,14 @@ p
 			left: 50%
 			transform: translate(-50%, -50%)
 
-.parallelogram__content-slider .owl-nav
+.parallelogram-item__content .owl-nav
 	position: absolute
-	bottom: -114px
+	bottom: 0
 	right: 50px
+	z-index: 1
+
+.parallelogram__content-slider
+	margin-bottom: 20px
 
 .parallelogram__item
 	&.first h4
@@ -646,8 +651,7 @@ p
 
 .f__c-section_first-slider
 	padding-right: 40px
-	.owl-nav
-		text-align: right
+	padding-bottom: 65px
 	&:after
 		content: ''
 		display: block
@@ -661,6 +665,12 @@ p
 		clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%)
 	.owl-nav span:after
 		transform: skewX(-6deg)
+
+.footer__custom-section_first .owl-nav
+	position: absolute
+	text-align: right
+	right: 39px
+	bottom: 0
 
 .f__c-section_second-content
 	position: relative

@@ -91,7 +91,7 @@ $(document).ready(function() {
 		items: 1,
 		nav: true,
 		loop: true,
-		navElement: 'div class="custom_button-nav"',
+		navElement: 'div class="custom_button-nav p__c-s_nav"',
 		responsiveClass:true,
 		responsive:{
 			0:{
@@ -106,12 +106,13 @@ $(document).ready(function() {
 		}
 	});
 
+
 	$(".f__c-section_first-slider").owlCarousel({
 		items: 1,
 		dots: false,
 		nav: true,
 		loop: true,
-		navElement: 'div class="custom_button-nav owl_footer__slider"',
+		navElement: 'div class="custom_button-nav f__c-s_f-s_nav owl_footer__slider"',
 		responsiveClass:true,
 		responsive:{
 			0:{
@@ -125,6 +126,9 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	$('.p__c-s_nav').parent('.owl-nav').appendTo('.p-i__content-second');
+	// $('.f__c-s_f-s_nav').parent('.owl-nav').appendTo('.f__c-s_f-footer');
 
 })
 

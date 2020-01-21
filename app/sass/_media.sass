@@ -45,7 +45,7 @@
 		width: 90vw
 	.f__c-section_f-slider__item
 		width: 100%
-	.f__c-section_first-slider .owl-nav
+	.footer__custom-section_first .owl-nav
 		padding-right: 7px
 	.f__c-section_first-slider .owl-nav span:after
 		transform: skewX(-9deg)
@@ -153,7 +153,7 @@
 	.parallelogram__content
 		padding-top: 40px
 	.main__service-slider
-		margin-top: 141px
+		margin-top: 175px
 	.main__index-page__footer
 		padding-top: 720px
 		padding-bottom: 150px
@@ -180,8 +180,9 @@
 		.parallelogram-item__content
 			top: 100px
 			padding-left: 35px
+			background: #e4f2fc
 			&:after
-				background: #E4F2FC
+				background: unset
 	.main__service-slider-item
 		padding: 30px 90px
 		margin: 0 -45px
@@ -192,8 +193,13 @@
 	.f__c-section_first-slider
 		&:after
 			clip-path: none
+			background: unset
 		.owl-nav
 			padding-right: 0
+	.f__c-s_f-footer
+		background: white
+	.f__c-section_first-slider .owl-stage-outer
+		margin-bottom: 30px
 
 @media only screen and (max-width : 400px)
 	.big__slider-title
@@ -222,6 +228,48 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
+	.big__slider-title
+		font-size: 32px
+		line-height: 40px
+	.big__slider-content
+		margin: 10px 0 24px
+	.nav-menu_mobile-logotype img
+		height: 40px
+	.menu_hamburger-button
+		width: 80px
+		height: 80px
+	span.menu_hamburder-icon
+		width: 80px
+		height: 80px
+		background-size: 35px
+	.big__slider-item
+		height: 600px
+	.parallelogram__item.second .parallelogram-item__content
+		min-height: 548px
+	.section-advan__container .col-4
+		grid-template-columns: 1fr
+	.f__c-s_s-c__title
+		font-size: 32px
+		line-height: 100%
+	.footer__custom-section_first .owl-nav
+		padding-top: 30px
+	.main__index-page__footer
+		padding: 780px 0 160px
+	.footer__logotype img
+		height: 35px
+	.footer__phone
+		font-size: 16px
+		margin-left: 15px
+		.hightlight
+			font-size: 18px
+		img
+			height: 20px
+	.footer__content .col-a_a
+		grid-template-columns: 1fr
+	.footer__block-logotypes
+		bottom: -130px
+	.footer__block-logo_item
+		margin-left: 20px
 
 
 /*==========  Mobile First  ==========*/
