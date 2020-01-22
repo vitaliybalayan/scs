@@ -154,6 +154,7 @@ a
 	text-transform: uppercase
 	letter-spacing: 0.3em
 	padding: 8px 16px 7px
+	line-height: 100%
 	font-weight: bold
 	font-size: 10px
 	z-index: 1
@@ -720,7 +721,7 @@ p
 	margin-top: -82px
 
 .main__index-page__footer
-	 padding-top: 325px
+	 padding-top: 120px
 
 .main__footer
 	background-color: #003353
@@ -900,5 +901,123 @@ p
 		&:hover
 			color: #71CAF3
 			text-decoration: underline
+
+.clients_block
+	position: relative
+	min-height: 420px
+	color: white
+	overflow: hidden
+
+.grid-block
+	display: block
+
+.col-3
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+
+.main-content
+	padding-top: 91px
+
+.clients-content
+	padding-top: 160px
+
+.head__title
+	font-size: 20px
+	text-transform: uppercase
+	font-weight: 300
+	letter-spacing: .1em
+	color: #71CAF3
+	margin: 0 0 20px
+
+.clients-grid
+	padding: 10px 0 0
+
+.client-grid_block
+	padding: 40px
+
+.c-g_b__title
+	position: relative
+	font-size: 18px
+	padding-bottom: 20px
+	margin: 0 0 15px
+	z-index: 1
+
+.c-g_b__desc
+	position: relative
+	font-size: 16px
+	text-transform: uppercase
+	letter-spacing: .1em
+	z-index: 1
+
+.c-g_b__title:after
+	position: absolute
+	content: ''
+	display: block
+	width: 40px
+	height: 3px
+	background: white
+	bottom: 0
+
+.c-g_b__footer-block
+	position: absolute
+	bottom: 40px
+	right: 40px
+	left: 40px
+	text-transform: uppercase
+	font-weight: 300
+	font-size: 18px
+	line-height: 24px
+	z-index: 1
+
+.c-g_b__footer-block.hover
+	bottom: -50px
+	transition: all 750ms cubic-bezier(.19,1,.22,1)
+
+.c-g_b__desc-hover
+	position: relative
+	z-index: 1
+	margin-top: 30px
+	color: white
+	left: -350px
+	transition: all 750ms cubic-bezier(.19,1,.22,1)
+
+.clients_block:after
+	content: ''
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	background: black
+	opacity: 0.5
+	z-index: 0
+	transition: all 750ms cubic-bezier(.19,1,.22,1)
+
+.c-g_b__footer
+	z-index: 1
+
+.clients_block:hover
+	.c-g_b__desc-hover
+		left: 0
+	&:after
+		background: #66CCFF
+		opacity: 0.8
+
+.c-g_b__desc-h_block
+	margin-bottom: 15px
+	&:last-child
+		margin-bottom: 0
+	p
+		margin-top: 7px
+
+.clients_block:hover .c-g_b__footer-block
+	display: none
+	&.hover
+		display: block
+		bottom: 40px
+
+.footer_line
+	height: 30px
+	background: linear-gradient(288.47deg, #D7ED76 -2.3%, #C3E9A5 59.17%, #9CE0FF 91.37%)
 
 @import "media" // Всегда в конце
