@@ -117,15 +117,28 @@
 		padding: 70px 90px 30px 72px
 	.col-3.clients-grid
 		grid-template-columns: 1fr 1fr
+	.contact_form >
+	.col-2, .col-1_a
+		grid-template-columns: 1fr
+	.container
+		width: 100%
+		padding: 0 35px
+	.contact__infooter-block_link
+		padding: 30px
+	.footer__logotype img
+		height: 30px
+	.footer__block-logotypes
+		bottom: -100px
+	.inner-page__footer
+		padding-bottom: 170px
+	.footer__block-logotypes
+		bottom: -130px
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.nav-menu_mobile
 		padding: 20px 35px
-	.container
-		width: 100%
-		padding: 0 35px
 	.big__slider-content_container
 		padding: 0
 	.big__slider-dots_container, .fullframe-section
@@ -204,6 +217,10 @@
 		margin-bottom: 30px
 	.col-3.clients-grid
 		grid-template-columns: 1fr
+	.footer__phone
+		font-size: 20px
+		.hightlight
+			font-size: 26px
 
 @media only screen and (max-width : 400px)
 	.big__slider-title
@@ -225,10 +242,14 @@
 		img
 			height: 40px
 	.footer__phone
-		font-size: 18px
+		font-size: 16px
 		margin-left: 20px
 		.hightlight
-			font-size: 21px
+			font-size: 18px
+	.footer__phone img
+		height: 20px
+	.footer__content > [class*='gap']
+		grid-gap: 20px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -270,11 +291,8 @@
 			height: 20px
 	.footer__content .col-a_a
 		grid-template-columns: 1fr
-	.footer__block-logotypes
-		bottom: -130px
 	.footer__block-logo_item
 		margin-left: 20px
-
 
 /*==========  Mobile First  ==========*/
 

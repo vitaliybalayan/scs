@@ -193,6 +193,10 @@ a.stadrt__button.green:before
 	letter-spacing: 0.3em
 	font-weight: bold
 	font-size: 10px
+	background: none
+	border: 0
+	outline: none
+	cursor: pointer
 	&.green
 		color: #BBCF33
 		&:after
@@ -1017,7 +1021,171 @@ p
 		bottom: 40px
 
 .footer_line
-	height: 30px
+	min-height: 30px
 	background: linear-gradient(288.47deg, #D7ED76 -2.3%, #C3E9A5 59.17%, #9CE0FF 91.37%)
+
+.contact_city-container
+	position: relative
+	// top: -5px
+
+.contact_city-link
+	position: relative
+	padding: 20px
+	line-height: 100%
+	font-weight: bold
+	color: #005B96
+	font-size: 32px
+	&.active:before
+		content: ''
+		position: absolute
+		border: 20px solid transparent
+		border-bottom: 20px solid #66CCFF
+		top: -45px
+		left: 50%
+		transform: translate(-50%, 0)
+
+.infooter-block, .contact__infooter-block
+	position: relative
+
+.contact__infooter-block_link
+	position: absolute
+	display: block
+	width: 100%
+	min-height: 340px
+	color: white
+	font-size: 22px
+	z-index: 1
+	top: -380px
+	padding: 60px 80px
+
+.inner-page__footer
+	padding-top: 280px
+
+.white__content
+	background: white
+
+.contact_city-data
+	padding: 40px 0
+	color: #005B96
+
+.city__address
+	font-size: 24px
+	font-weight: 300
+
+.city_phone
+	font-size: 32px
+	font-weight: bold
+	padding: 25px 0
+
+.city_email
+	font-size: 26px
+	font-weight: 300
+
+.city_phone:after
+	content: ''
+	display: inline-block
+	width: 25px
+	height: 25px
+	background: url('img/icons/phone_blue.svg')
+	margin-left: 10px
+
+.white__content
+	background: white
+
+.contact_city-data
+	padding: 40px 0
+	color: #005B96
+
+.city__address
+	font-size: 24px
+	font-weight: 300
+
+.city_phone
+	font-size: 32px
+	font-weight: bold
+	padding: 25px 0
+
+.city_email
+	font-size: 26px
+	font-weight: 300
+
+.city_phone:after
+	content: ''
+	display: inline-block
+	width: 25px
+	height: 25px
+	background: url('img/icons/phone_blue.svg')
+	margin-left: 10px
+
+.callback_form
+	padding: 50px 0 120px
+
+.custom_label
+	display: block
+	font-size: 18px
+	text-transform: uppercase
+	color: #66CCFF
+	margin-bottom: 10px
+
+.default_input
+	background: none
+	color: white
+	border: 0
+	border-bottom: 2px solid white
+	padding: 10px 0
+	font-weight: bold
+	font-size: 16px
+	width: 100%
+	margin-top: 10px
+    font-family: $default-font
+	&::placeholder
+		color: white
+		font-weight: bold
+		font-size: 16px
+
+.form-control
+	margin: 40px 0
+
+.default_textarea
+	width: 100%
+	background: none
+	border: 0
+	border-bottom: 2px solid white
+	color: white
+	font-size: 16px
+	font-weight: bold
+	min-height: 100px
+	resize: vertical
+    font-family: $default-font
+	&::placeholder
+		color: white
+		font-size: 16px
+		font-weight: bold
+
+[class*='col'] > .form-control
+	margin: 0
+
+.contact_form
+	> [class*='col']
+		margin: 40px 0
+	.notify
+		font-size: 16px
+		line-height: 20px
+		color: white
+
+.col-1_a
+	display: grid
+	grid-template-columns: 1fr auto
+
+.text-left
+	text-align: left
+
+.contact_city-data
+	display: none
+	&.active
+		display: block
+
+.default_input option
+	color: black
 
 @import "media" // Всегда в конце

@@ -1,12 +1,5 @@
 $(function() {
-
-	// var owl = $('.owl-carousel');
-	// owl.owlCarousel({
-	// 	items: 1,
-	// 	dots: false,
-	// });
-
-
+	autosize($('textarea'));
 });
 
 $(document).ready(function() {
@@ -154,7 +147,7 @@ $(document).mouseup(function (e) {
 
 function showBlock(str) {
 	
-	var block = $('[data-tab]');
+	var block = $('[data-tab='+ str +']');
 	var tab_block = $('[data-tab_block='+ str +']');
 
 	$('.tab_block').removeClass('active'); 
@@ -162,7 +155,9 @@ function showBlock(str) {
 
 
 	tab_block.addClass('active');
-	$('[data-tab='+ str +']').show();
+	$('[data-tab]').removeClass('active');
+	block.addClass('active');
+	block.show();
 
 }
 
