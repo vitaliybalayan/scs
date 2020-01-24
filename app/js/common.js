@@ -4,6 +4,77 @@ $(function() {
 
 $(document).ready(function() {
 
+	$('.submenu_link').on('click', function(event) {
+		
+		var main_menu = $('.nav-menu');
+		var id = $(this).data('submenu');
+
+		if (id) {
+			event.preventDefault();
+
+			$('[data-submenu_item]').hide();
+
+			main_menu.addClass('show_submenu');
+			$('[data-submenu_item='+ id +']').fadeIn();
+
+		} else {
+			main_menu.removeClass('show_submenu');
+			$('[data-submenu_item]').hide();
+			return true;
+		}
+
+		$(document).mouseup(function (e) {
+		    var container = $('.nav-menu');
+		    if (container.has(e.target).length === 0){
+				$('[data-submenu_item]').hide();
+		        container.removeClass('show_submenu');
+		    }
+		});
+
+		console.log(id);
+
+	});
+
+	$('.mobile-submenu_link').on('click', function(event) {
+		
+		var id = $(this).data('menu');
+
+		if (id) {
+
+			if ($('[data-menu_item='+ id +']').css('display') == 'block') {
+				$('[data-menu_item='+ id +']').slideUp();
+
+				return false;
+			}
+
+			event.preventDefault();
+
+			$('[data-menu_item]').slideUp();
+			$('[data-menu_item='+ id +']').slideDown();
+
+		} else {
+			return true;
+		}
+
+	});
+
+	$('.custom_tooltip-container').on('click', function(event) {
+		var tooltip = $(this).data('custom_tooltip');
+
+		$('[data-custom_tooltip_item='+ tooltip +']').fadeIn();
+	})
+
+	$(".anchor_link").click(function() {
+		$("html, body").animate({
+			scrollTop: $($(this).attr("href")).offset().top - 150 + "px"
+		}, {
+			duration: 500,
+			easing: "swing"
+		});
+		
+		return false;
+	});
+
 	$('.big__slider-container').slick({
 		// infinite: false,
 		slidesToShow: 1,
@@ -138,10 +209,16 @@ function showDropdown(value) {
 }
 
 $(document).mouseup(function (e) {
-    var container = $('.dropdown-_value');
+    var container = $('.nav-menu');
     if (container.has(e.target).length === 0){
-        container.slideUp();
-        container.removeClass('active');
+        container.removeClass('show_submenu');
+    }
+});
+
+$(document).mouseup(function (e) {
+    var container = $('.custom_tooltip-item');
+    if (container.has(e.target).length === 0){
+		container.fadeOut();
     }
 });
 

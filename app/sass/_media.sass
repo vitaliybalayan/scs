@@ -16,6 +16,17 @@
 	.main__service-slider-item
 		margin: 0 -30px
 		clip-path: polygon(20% 0,100% 0,80% 100%,0 100%)
+	.blockquote-right
+		width: 100%
+		right: 0
+		top: 0
+		margin: 30px 0
+		text-align: center
+		font-size: 22px
+	[class*=blockquote-]::after
+		transform: unset
+	.inner-page .gap-30
+		grid-gap: 0
 
 
 /* Small Devices, Tablets */
@@ -66,12 +77,8 @@
 		font-size: 16px
 	.f__c-s_s-c__title
 		margin-bottom: 20px
-	.main__index-page__footer
-		padding-top: 660px
-		.col-2
-			grid-template-columns: 1fr 0.7fr
 	.footer__block-logo_item
-		margin-left: 25px
+		margin-left: 20px
 		line-height: 0
 	.parallelogram__item.first h4
 		margin-left: 72px
@@ -92,13 +99,17 @@
 		font-size: 16px
 	.f__c-s_s-c__title
 		margin-bottom: 20px
-	.main__index-page__footer
+
+	.inner__index-page__footer
 		padding-top: 660px
 		.col-2
 			grid-template-columns: 1fr 0.7fr
-	.footer__block-logo_item
-		margin-left: 25px
-		line-height: 0
+
+	.main__index-page__footer
+		padding-top: 790px
+		padding-bottom: 150px
+		.col-2
+			grid-template-columns: 1fr
 	.parallelogram__content-block h1
 		width: 100%
 	.parallelogram-item__content
@@ -127,12 +138,12 @@
 		padding: 30px
 	.footer__logotype img
 		height: 30px
-	.footer__block-logotypes
-		bottom: -100px
 	.inner-page__footer
 		padding-bottom: 170px
 	.footer__block-logotypes
 		bottom: -130px
+	.footer__foo .col-2
+		grid-template-columns: auto auto
 
 
 /* Extra Small Devices, Phones */
@@ -169,11 +180,17 @@
 		padding-top: 40px
 	.main__service-slider
 		margin-top: 175px
-	.main__index-page__footer
+
+	.inner__index-page__footer
 		padding-top: 50px
 		padding-bottom: 150px
 		> div > .col-2
 			grid-template-columns: 1fr
+
+	.main__index-page__footer
+		> div > .col-2
+			grid-template-columns: 1fr
+
 	.footer__block-logotypes
 		bottom: -120px
 	.video__icon-block
@@ -278,8 +295,13 @@
 		line-height: 100%
 	.footer__custom-section_first .owl-nav
 		padding-top: 30px
-	.main__index-page__footer
+
+	.inner__index-page__footer
 		padding: 50px 0 160px
+
+	.main__index-page__footer
+		padding: 800px 0 160px
+
 	.footer__logotype img
 		height: 35px
 	.footer__phone
@@ -291,8 +313,8 @@
 			height: 20px
 	.footer__content .col-a_a
 		grid-template-columns: 1fr
-	.footer__block-logo_item
-		margin-left: 20px
+	.mobile-menu_block
+		top: 80px
 
 /*==========  Mobile First  ==========*/
 

@@ -12,20 +12,20 @@
 
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon/favicon-64x64.png" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
 	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
+	<meta name="theme-color" content="#005b96">
 	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#000">
+	<meta name="msapplication-navbutton-color" content="#005b96">
 	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#005b96">
 
 	<link rel="stylesheet" href="css/main.min.css">
 
@@ -33,8 +33,9 @@
 
 <body>
 
+	<!-- HEADER -->
 	<header class="fixed-header">
-		
+		<!-- TOP Header -->
 		<div class="top-header">
 			<div class="container">
 				<div class="top-header__content inline-middle">
@@ -51,7 +52,55 @@
 				</div>
 			</div>
 		</div>
+		<!-- TOP Header -->
+		<!-- Mobile menu -->
+		<div class="nav-menu_mobile">
+			<div class="g-content">
+				<div class="nav-menu_mobile-content col-2">
+					
+					<div class="nav-menu_mobile-logotype">
+						<a href="#">
+							<img src="img/logo.svg" alt="SCS">
+						</a>
+					</div>
+					<div class="nav-menu_mobile-hamburger">
+						
+						<div class="menu_hamburger-button" onclick="showMobileMenu();">
+							<span class="menu_hamburder-icon"></span>
+						</div>
+
+						<div class="mobile-menu_block">
+
+							<div class="mobile-menu-item">
+								<a href="#" class="mobile-submenu_link" data-menu="1">Услуги</a>
+								<div class="mobile-submenu" data-menu_item="1">
+									<a href="#">Корпоративное питание</a>
+									<a href="#">Прачечные услуги</a>
+								</div>
+							</div>
+
+							<div class="mobile-menu-item">
+								<a href="#" class="mobile-submenu_link" data-menu="2">O SCS</a>
+								<div class="mobile-submenu" data-menu_item="2">
+									<a href="#">Корпоративное питание</a>
+								</div>
+							</div>
+
+							<a href="#" class="mobile-submenu_link">Сертификация</a>
+							<a href="#" class="mobile-submenu_link">Наши клиенты</a>
+							<a href="#" class="mobile-submenu_link">Новости</a>
+							<a href="#" class="mobile-submenu_link">Контакты</a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- Mobile menu -->
+		<!-- Main menu -->
 		<div class="nav-menu">
+
 			<div class="g-content">
 				<div class="nav-menu__content">
 					<div class="container">
@@ -60,24 +109,67 @@
 								<img src="img/logo.svg" alt="Ships Catering Supply">
 							</div>
 							<nav class="menu__list">
-								<a href="#">Услуги</a>
-								<a href="#">O SCS</a>
-								<a href="#">Сертификация</a>
-								<a href="#">Наши клиенты</a>
-								<a href="#">Новости</a>
-								<a href="#">Контакты</a>
+								<a href="#" class="submenu_link" data-submenu="1">Услуги</a>
+								<a href="#" class="submenu_link" data-submenu="2">O SCS</a>
+								<a href="#" class="submenu_link" data-submenu="3">Сертификация</a>
+								<a href="#" class="submenu_link" data-submenu="4">Наши клиенты</a>
+								<a href="#" class="submenu_link" data-submenu="5">Новости</a>
+								<a href="#" class="submenu_link">Контакты</a>
 							</nav>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<div class="submenu-conainer">
+				<div class="g-content">
+					<div class="container">
+						
+						<div class="submenu-content">
+							
+							<div class="submenu-item" data-submenu_item="1">
+								<a href="#" onclick="return false;">1</a>
+								<a href="#" onclick="return false;">2</a>
+								<a href="#" onclick="return false;">3</a>
+							</div>
+
+							<div class="submenu-item" data-submenu_item="2">
+								<a href="#" onclick="return false;">О компании</a>
+								<a href="#" onclick="return false;">Миссия и ценности</a>
+								<a href="#" onclick="return false;">Статистика</a>
+							</div>
+
+							<div class="submenu-item" data-submenu_item="3">
+								<a href="#" onclick="return false;">1</a>
+								<a href="#" onclick="return false;">3</a>
+								<a href="#" onclick="return false;">2</a>
+							</div>
+
+							<div class="submenu-item" data-submenu_item="4">
+								<a href="#" onclick="return false;">3</a>
+								<a href="#" onclick="return false;">1</a>
+								<a href="#" onclick="return false;">2</a>
+							</div>
+
+							<div class="submenu-item" data-submenu_item="5">
+								<a href="#" onclick="return false;">2</a>
+								<a href="#" onclick="return false;">1</a>
+								<a href="#" onclick="return false;">3</a>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
 		</div>
-
+		<!-- Main menu -->
 	</header>
+	<!-- HEADER -->
 
+	<!-- Big slider -->
 	<section class="big__slider">
 		<div class="big__slider-container">
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
@@ -93,12 +185,11 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
 						<div class="big__slider-content_container">
-							<div class="big__slider-title">Корпоративное питание</div>
+							<div class="big__slider-title">Поддержим порядок</div>
 							<div class="big__slider-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
 							<div class="big__slider-buttons inline-middle">
 								<div class="big__slider-button">
@@ -109,12 +200,11 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
 						<div class="big__slider-content_container">
-							<div class="big__slider-title">Корпоративное питание</div>
+							<div class="big__slider-title">Создадим чистоту</div>
 							<div class="big__slider-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
 							<div class="big__slider-buttons inline-middle">
 								<div class="big__slider-button">
@@ -125,12 +215,11 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
 						<div class="big__slider-content_container">
-							<div class="big__slider-title">Корпоративное питание</div>
+							<div class="big__slider-title">Наладим работу систем</div>
 							<div class="big__slider-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
 							<div class="big__slider-buttons inline-middle">
 								<div class="big__slider-button">
@@ -141,12 +230,11 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="big__slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('img/slider/slider-photo.jpg') 50% no-repeat; background-size: cover;">
 				<div class="big__slider-content">
 					<div class="container">
 						<div class="big__slider-content_container">
-							<div class="big__slider-title">Корпоративное питание</div>
+							<div class="big__slider-title">Предоставим работников</div>
 							<div class="big__slider-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
 							<div class="big__slider-buttons inline-middle">
 								<div class="big__slider-button">
@@ -157,40 +245,33 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
-
 		<div class="big__slider-dots">
 			<div class="big__slider-dots_container">
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Вкусно накормим</div>
 				</div>
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Поддержим порядок</div>
 				</div>
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Создадим чистоту</div>
 				</div>
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Наладим работу систем</div>
 				</div>
-
 				<div class="big__slider-dot_item">
 					<div class="big__slider-dot_line"></div><div class="big__slider-dot_title">Предоставим работников</div>
 				</div>
-
 			</div>
 		</div>
-
 	</section>
+	<!-- Big slider -->
 
 	<section class="fullframe__images">
 		<div class="fullframe-section">
 			<div class="col-5 gap-30">
+
 				<div class="ff-images__block">
 					<a href="#"><img src="img/logotypes/maersk-bw.png" alt="maersk-bw"></a>
 				</div>
@@ -206,6 +287,7 @@
 				<div class="ff-images__block">
 					<a href="#"><img src="img/logotypes/total-bw.png" alt="TOTAL"></a>
 				</div>
+				
 			</div>
 		</div>
 	</section>
@@ -219,29 +301,25 @@
 					<div class="parallelogram__item first">
 						<div class="parallelogram-item__title"><h4>О ships catering supply</h4></div>
 						<div class="parallelogram-item__content">
-
 							<div class="parallelogram__content-block">
 								<h1>Первая казахстанская сервисная компания</h1>
 								<p data-size="middle" data-font_weight="light">Мы построили нашу репутацию на ценностях профессионализма, инноваций, технических знаний, качества, здоровья и безопасности.</p>
 							</div>
-
 							<div class="parallelogram__content-block">
 								<h5 data-font_weight="bold">Уверенное развитие</h5>
 								<p data-size="normal" data-font_weight="light">Высокие конкуренция и стандарты качества позволили нам в самые кратчайшие сроки достичь очень высокого уровня сервиса, сравнимого с международными игроками и в некоторых моментах даже превзойти его.</p>
 							</div>
-
 							<div class="parallelogram__content-block">
 								<div class="parallelogram-links">
 									<a href="#" class="text__button green" data-size="middle">История & Миссия</a>
 								</div>
 							</div>
-
 						</div>
 					</div>
 
 					<div class="parallelogram__item second">
 						<div class="parallelogram-item__title"><h4>Факты & Цифры</h4></div>
-						<div class="parallelogram-item__content">
+						<div class="parallelogram-item__content p-i__content-second">
 							
 							<div class="owl-carousel parallelogram__content-slider">
 
@@ -282,61 +360,61 @@
 			</div>
 		</div>
 
-	<section class="main__service-slider">
-		<div class="container">
-			<div class="custom-section__title">
-				<h4>Объекты обслуживания</h4>
+		<section class="main__service-slider">
+			<div class="container">
+				<div class="custom-section__title">
+					<h4>Объекты обслуживания</h4>
+				</div>
 			</div>
-		</div>
-		<div class="main__service-slider-container">	
-			<a href="#" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-services-1.jpg') 50% no-repeat; background-size: cover;">
-				<div class="main__service-slider-content">
-					<div class="main__service-slider-title">Caspian Offshore Construction</div>
-					<div class="main__service-slider-subtitle">Порт курык</div>
-				</div>
-			</a>
+			<div class="main__service-slider-container">	
+				<a href="#" onclick="return false;" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-services-1.jpg') 50% no-repeat; background-size: cover;">
+					<div class="main__service-slider-content">
+						<div class="main__service-slider-title">Caspian Offshore Construction</div>
+						<div class="main__service-slider-subtitle">Порт курык</div>
+					</div>
+				</a>
 
-			<a href="#" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-services-2.jpg') 50% no-repeat; background-size: cover;">
-				<div class="main__service-slider-content">
-					<div class="main__service-slider-title">Caspian Offshore Construction</div>
-					<div class="main__service-slider-subtitle">Порт курык</div>
-				</div>
-			</a>
+				<a href="#" onclick="return false;" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-services-2.jpg') 50% no-repeat; background-size: cover;">
+					<div class="main__service-slider-content">
+						<div class="main__service-slider-title">Caspian Offshore Construction</div>
+						<div class="main__service-slider-subtitle">Порт курык</div>
+					</div>
+				</a>
 
-			<a href="#" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-services-3.jpg') 50% no-repeat; background-size: cover;">
-				<div class="main__service-slider-content">
-					<div class="main__service-slider-title">Caspian Offshore Construction</div>
-					<div class="main__service-slider-subtitle">Порт курык</div>
-				</div>
-			</a>
+				<a href="#" onclick="return false;" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-services-3.jpg') 50% no-repeat; background-size: cover;">
+					<div class="main__service-slider-content">
+						<div class="main__service-slider-title">Caspian Offshore Construction</div>
+						<div class="main__service-slider-subtitle">Порт курык</div>
+					</div>
+				</a>
 
-			<a href="#" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-services-4.jpg') 50% no-repeat; background-size: cover;">
-				<div class="main__service-slider-content">
-					<div class="main__service-slider-title">Caspian Offshore Construction</div>
-					<div class="main__service-slider-subtitle">Порт курык</div>
-				</div>
-			</a>
+				<a href="#" onclick="return false;" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-services-4.jpg') 50% no-repeat; background-size: cover;">
+					<div class="main__service-slider-content">
+						<div class="main__service-slider-title">Caspian Offshore Construction</div>
+						<div class="main__service-slider-subtitle">Порт курык</div>
+					</div>
+				</a>
 
-			<a href="#" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-slider-1.jpg') 50% no-repeat; background-size: cover;">
-				<div class="main__service-slider-content">
-					<div class="main__service-slider-title">Caspian Offshore Construction</div>
-					<div class="main__service-slider-subtitle">Порт курык</div>
-				</div>
-			</a>
+				<a href="#" onclick="return false;" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/index-page-slider-1.jpg') 50% no-repeat; background-size: cover;">
+					<div class="main__service-slider-content">
+						<div class="main__service-slider-title">Caspian Offshore Construction</div>
+						<div class="main__service-slider-subtitle">Порт курык</div>
+					</div>
+				</a>
 
-			<a href="#" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/inner-page-head-1.jpg') 50% no-repeat; background-size: cover;">
-				<div class="main__service-slider-content">
-					<div class="main__service-slider-title">Caspian Offshore Construction</div>
-					<div class="main__service-slider-subtitle">Порт курык</div>
-				</div>
-			</a>
-		</div>
-		<div class="container">
-			<div class="main__service-slider-footer" data-text_align="right">
-				<a href="#" class="stadrt__button green">Все объекты</a>
+				<a href="#" onclick="return false;" class="main__service-slider-item" style="background: linear-gradient(0deg, rgba(0, 21, 44, 0.6), rgba(0, 21, 44, 0.6)), url('/img/backgrounds/inner-page-head-1.jpg') 50% no-repeat; background-size: cover;">
+					<div class="main__service-slider-content">
+						<div class="main__service-slider-title">Caspian Offshore Construction</div>
+						<div class="main__service-slider-subtitle">Порт курык</div>
+					</div>
+				</a>
 			</div>
-		</div>
-	</section>
+			<div class="container">
+				<div class="main__service-slider-footer" data-text_align="right">
+					<a href="#" onclick="return false;" class="stadrt__button green">Все объекты</a>
+				</div>
+			</div>
+		</section>
 
 	</section>
 
@@ -378,7 +456,7 @@
 				<div class="video__container inline-middle">
 					<div class="video__title">Видео о SCS</div>
 					<div class="video__icon">
-						<div class="video__icon-block">
+						<div class="video__icon-block pulse">
 							<img src="/img/icons/play.svg" alt="Посмотреть">
 						</div>
 					</div>
@@ -387,12 +465,13 @@
 		</a>
 	</section>
 
+	<!-- Footer MAIN Page -->
 	<section class="footer__custom-section">
 		<div class="g-content">
 			
 
 			<div class="footer__custom-section_first-container">
-				<div class="footer__custom-section_first">
+				<div class="footer__custom-section_first f__c-s_f-footer">
 					<div class="owl-carousel f__c-section_first-slider">
 						<div class="f__c-section_f-slider__item">
 							<div class="f__c-s_f-s__item-title">
@@ -427,7 +506,9 @@
 
 		</div>
 	</section>
+	<!-- Footer MAIN Page -->
 
+	<!-- Footer -->
 	<section class="main__footer main__index-page__footer">
 		<div class="container">
 			<div class="col-2">
@@ -437,7 +518,7 @@
 						<div class="footer__logotype">
 							<img src="/img/SCS-footer-logo.svg" alt="SCS">
 						</div>
-						<div class="footer__phone inline-middle">+7 (7292) <span class="hightlight">533 525</span><img src="/img/icons/call-white.svg" alt="Телефон"></div>
+						<div class="footer__phone inline-middle"><a href="tel:+77292533525">+7 (7292) <span class="hightlight">533 525</span><img src="/img/icons/call-white.svg" alt="Телефон"></a></div>
 					</div>
 
 					<div class="footer__content">
@@ -448,12 +529,16 @@
 							<div class="footer__address">
 								
 								<div class="footer__address-head inline-middle">
-									<a href="#" class="active">Офис в Актау</a>
-									<a href="#">Офис в Атырау</a>
+									<a href="javascript:void(0)" class="tab_block active" data-tab_block="aktau_address" onclick="showBlock('aktau_address');">Офис в Актау</a>
+									<a href="javascript:void(0)" class="tab_block" data-tab_block="atyrau_address" onclick="showBlock('atyrau_address');">Офис в Атырау</a>
 								</div>
 
-								<div class="footer__address-content" id="f__a-content">
+								<div class="footer__address-content active" id="f__a-content" data-tab="aktau_address">
 									130000, Казахстан, Мангистауская обл., микрорайон 10, дом 2, офис 2
+								</div>
+
+								<div class="footer__address-content" id="f__a-content" data-tab="atyrau_address">
+									130000, Казахстан, Атырауская обл., микрорайон 10, дом 2, офис 2
 								</div>
 
 							</div>
@@ -461,8 +546,24 @@
 						</div>
 						<div class="footer__foo">
 							<div class="col-2">
-								<a href="#">Developers</a>
-								<a href="#">office@s-c-s.kz</a>
+								<span class="custom_tooltip-container" data-custom_tooltip="develop">
+									<div class="custom_tooltip-item" data-custom_tooltip_item="develop">
+										<div class="col-2 gap-30">
+											<div>
+												<h5>Разработка</h5>
+												<span>PARALLAX PRO</span>
+												<a href="https://parallax.pro/" target="_blank">https://parallax.pro/</a>
+											</div>
+											<div>
+												<h5>Дизайн</h5>
+												<span>a.shine</span>
+												<a href="tel:+77779126669">+7 (777) 912-66-69</a>
+											</div>
+										</div>
+									</div>
+									<span class="footer__link">Devolepers</span>
+								</span>
+								<a href="#" class="footer__link">office@s-c-s.kz</a>
 							</div>
 						</div>
 					</div>
@@ -480,6 +581,7 @@
 			</div>
 		</div>
 	</section>
+	<!-- Footer -->
 
 	<script src="js/scripts.min.js"></script>
 
