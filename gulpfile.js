@@ -42,6 +42,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/owl/owl.carousel.min.js',
 		'app/libs/slick/slick.min.js',
 		'app/libs/autosize-master/dist/autosize.min.js',
+		'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

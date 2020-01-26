@@ -1,5 +1,9 @@
 $(function() {
 	autosize($('textarea'));
+
+	$('.popup-link_image').magnificPopup({
+  		type: 'image'
+	});
 });
 
 $(document).ready(function() {
