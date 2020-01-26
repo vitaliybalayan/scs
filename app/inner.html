@@ -33,7 +33,7 @@
 
 <body>
 
-	<!-- Header -->
+	<!-- HEADER -->
 	<header class="fixed-header">
 		<!-- TOP Header -->
 		<div class="top-header">
@@ -59,7 +59,7 @@
 				<div class="nav-menu_mobile-content col-2">
 					
 					<div class="nav-menu_mobile-logotype">
-						<a href="/">
+						<a href="#">
 							<img src="img/logo.svg" alt="SCS">
 						</a>
 					</div>
@@ -70,12 +70,26 @@
 						</div>
 
 						<div class="mobile-menu_block">
-							<a href="#">Услуги</a>
-							<a href="#">O SCS</a>
-							<a href="#">Сертификация</a>
-							<a href="#">Наши клиенты</a>
-							<a href="#">Новости</a>
-							<a href="#">Контакты</a>
+
+							<div class="mobile-menu-item">
+								<a href="#" class="mobile-submenu_link" data-menu="1">Услуги</a>
+								<div class="mobile-submenu" data-menu_item="1">
+									<a href="#">Корпоративное питание</a>
+									<a href="#">Прачечные услуги</a>
+								</div>
+							</div>
+
+							<div class="mobile-menu-item">
+								<a href="#" class="mobile-submenu_link" data-menu="2">O SCS</a>
+								<div class="mobile-submenu" data-menu_item="2">
+									<a href="#">Корпоративное питание</a>
+								</div>
+							</div>
+
+							<a href="#" class="mobile-submenu_link">Сертификация</a>
+							<a href="/clients.html" class="mobile-submenu_link">Наши клиенты</a>
+							<a href="#" class="mobile-submenu_link">Новости</a>
+							<a href="#" class="mobile-submenu_link">Контакты</a>
 						</div>
 
 					</div>
@@ -86,31 +100,72 @@
 		<!-- Mobile menu -->
 		<!-- Main menu -->
 		<div class="nav-menu">
+
 			<div class="g-content">
 				<div class="nav-menu__content">
 					<div class="container">
 						<div class="col-a_1">
 							<div class="logotype">
-								<a href="/">
-									<img src="img/logo.svg" alt="Ships Catering Supply">
-								</a>
+								<img src="img/logo.svg" alt="Ships Catering Supply">
 							</div>
 							<nav class="menu__list">
-								<a href="#">Услуги</a>
-								<a href="#">O SCS</a>
-								<a href="#">Сертификация</a>
-								<a href="#">Наши клиенты</a>
-								<a href="#">Новости</a>
-								<a href="#">Контакты</a>
+								<a href="#" class="submenu_link" data-submenu="1">Услуги</a>
+								<a href="#" class="submenu_link" data-submenu="2">O SCS</a>
+								<a href="#" class="submenu_link" data-submenu="3">Сертификация</a>
+								<a href="/clients.html" class="submenu_link" data-submenu="4">Наши клиенты</a>
+								<a href="#" class="submenu_link" data-submenu="5">Новости</a>
+								<a href="#" class="submenu_link">Контакты</a>
 							</nav>
 						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="submenu-conainer">
+				<div class="g-content">
+					<div class="container">
+						
+						<div class="submenu-content">
+							
+							<div class="submenu-item" data-submenu_item="1">
+								<a href="#" onclick="return false;">1</a>
+								<a href="#" onclick="return false;">2</a>
+								<a href="#" onclick="return false;">3</a>
+							</div>
+
+							<div class="submenu-item" data-submenu_item="2">
+								<a href="#" onclick="return false;">О компании</a>
+								<a href="#" onclick="return false;">Миссия и ценности</a>
+								<a href="#" onclick="return false;">Статистика</a>
+							</div>
+
+							<div class="submenu-item" data-submenu_item="3">
+								<a href="#" onclick="return false;">1</a>
+								<a href="#" onclick="return false;">3</a>
+								<a href="#" onclick="return false;">2</a>
+							</div>
+
+							<div class="submenu-item" data-submenu_item="4">
+								<a href="#" onclick="return false;">3</a>
+								<a href="#" onclick="return false;">1</a>
+								<a href="#" onclick="return false;">2</a>
+							</div>
+
+							<div class="submenu-item" data-submenu_item="5">
+								<a href="#" onclick="return false;">2</a>
+								<a href="#" onclick="return false;">1</a>
+								<a href="#" onclick="return false;">3</a>
+							</div>
+
+						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- Main menu -->
 	</header>
-	<!-- Header -->
+	<!-- HEADER -->
 
 
 	<!-- Main content -->
@@ -191,12 +246,14 @@
 
 			<div class="col-2">
 				<div class="footer__block">
+
 					<div class="footer__head inline-middle">
 						<div class="footer__logotype">
 							<img src="/img/SCS-footer-logo.svg" alt="SCS">
 						</div>
-						<div class="footer__phone inline-middle">+7 (7292) <span class="hightlight">533 525</span><img src="/img/icons/call-white.svg" alt="Телефон"></div>
+						<div class="footer__phone inline-middle"><a href="tel:+77292533525">+7 (7292) <span class="hightlight">533 525</span><img src="/img/icons/call-white.svg" alt="Телефон"></a></div>
 					</div>
+
 					<div class="footer__content">
 						<div class="col-a_a gap-50">
 							<div class="footer_copyrite">
@@ -222,11 +279,28 @@
 						</div>
 						<div class="footer__foo">
 							<div class="col-2">
-								<a href="#">Devolepers</a>
-								<a href="#">office@s-c-s.kz</a>
+								<span class="custom_tooltip-container" data-custom_tooltip="develop">
+									<div class="custom_tooltip-item" data-custom_tooltip_item="develop">
+										<div class="col-2 gap-30">
+											<div>
+												<h5>Разработка</h5>
+												<span>PARALLAX PRO</span>
+												<a href="https://parallax.pro/" target="_blank">https://parallax.pro/</a>
+											</div>
+											<div>
+												<h5>Дизайн</h5>
+												<span>a.shine</span>
+												<a href="tel:+77779126669">+7 (777) 912-66-69</a>
+											</div>
+										</div>
+									</div>
+									<span class="footer__link">Devolepers</span>
+								</span>
+								<a href="#" class="footer__link">office@s-c-s.kz</a>
 							</div>
 						</div>
 					</div>
+
 				</div>
 				<div class="footer__block">
 					<div class="footer__block-logotypes">
