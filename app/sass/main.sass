@@ -105,6 +105,7 @@ a
 	cursor: pointer
 	span
 		margin-right: 3px
+		text-transform: uppercase
 	&:hover
 		color: #BBCF33
 
@@ -412,8 +413,8 @@ p
 	width: 616px
 	height: 100%
 	background: url('/img/backgrounds/rectangle_1.svg') no-repeat
-    background-position-y: 0
-    background-size: 100%
+	background-position-y: 0
+	background-size: 100%
 	z-index: 1
 
 .parallelogram-item__content
@@ -661,6 +662,7 @@ p
 	padding-left: 102px
 	padding-top: 50px
 	width: 530px
+	min-height: 303px
 
 .f__c-s_f-s__item-title h2
 	margin: 0 0 20px
@@ -1391,5 +1393,21 @@ blockquote
 	transition: $transition
 	&:hover
 		opacity: 1
+
+.news-item_image
+	width: 400px
+	min-height: 100%
+
+.news-item
+	display: flex
+	margin-bottom: 15px
+
+.news-item_content
+	padding: 35px
+	background: white
+	width: 100%
+	h2
+		font-size: 20px
+		margin-bottom: 0px
 
 @import "media" // Всегда в конце
