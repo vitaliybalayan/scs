@@ -53,7 +53,7 @@ body
 	color: #fff
 
 .fixed-header
-	position: fixed
+	position: absolute
 	top: 0
 	left: 0
 	right: 0
@@ -76,7 +76,8 @@ body
 
 .blue__content
 	background-color: #005b96
-	background-image: url(/img/backgrounds/decor_lines.svg)
+	background-image: url('../img/backgrounds/decor_lines.svg')
+	// background-attachment: fixed
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: right
@@ -86,11 +87,16 @@ body
 a
 	text-decoration: none
 
+.submenu-content
+	padding-left: 200px
+
 .top-header
+	position: relative
 	background: rgba(0, 91, 150, 0.75)
 	color: white
 	font-size: 10px
 	line-height: 100%
+	z-index: 9999
 	a
 		color: white
 		text-transform: uppercase
@@ -133,24 +139,25 @@ a
 
 
 .big__slider-item
-	height: 616px
+	height: 70vh
 
 .big__slider-content_container
 	position: absolute
 	top: 50%
 	z-index: 99
-	width: 376px
+	min-width: 300px
+	max-width: 500px
 	transform: translate(0, -50%)
 	color: white
 
 .big__slider-title
-	font-size: 50px
-	line-height: 50px
+	font-size: 58px
+	line-height: 110%
 	font-weight: bold
 
 .big__slider-content
-	font-size: 14px
-	line-height: 20px
+	font-size: 16px
+	line-height: 150%
 	margin: 24px 0
 	font-weight: 300
 
@@ -245,6 +252,7 @@ a
 .nav-menu__content
 	position: relative
 	// padding: 19px 0
+	z-index: 9999
 	&:after
 		content: ''
 		position: absolute
@@ -252,11 +260,26 @@ a
 		left: 0
 		right: 0
 		bottom: 0
-		transform: skew(170deg)
 		background: white
 		z-index: -1
 	.logotype
 		padding: 19px 0
+
+.nav-menu
+	&.fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		animation: slide-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+		.nav-menu__content
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05)		
+
+@keyframes slide-menu
+	0%
+		transform: translateY(-50vw)
+	100%
+		transform: translateY(0px)
 
 
 .g-content
@@ -303,9 +326,6 @@ a
 	line-height: 0
 	img
 		height: 50px
-
-.big__slider
-	position: relative
 
 .big__slider-dots
 	position: absolute
@@ -378,6 +398,14 @@ a
 	width: 110%
 	margin: 0 0 20px
 	line-height: 40px
+
+.parallelogram__item.second
+	position: absolute
+	right: 0
+	max-width: 540px
+
+.col-2_top
+	position: relative
 
 .parallelogram-item__content
 	padding-left: 110px
@@ -590,7 +618,7 @@ p
 
 .section-title__hightlight
 	position: absolute
-	padding: 70px 90px 30px 230px
+	padding: 70px 90px 30px 0
 	text-align: right
 	top: -40px
 	left: 0
@@ -849,7 +877,7 @@ p
 	margin: 0 -20px
 	padding: 30px 70px
 	color: white
-	min-height: 400px
+	min-height: 500px
 
 .main__service-slider-title
 	font-weight: bold
@@ -899,6 +927,12 @@ p
 	position: relative
 	background: white
 	padding: 20px 72px
+	&.fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		animation: slide-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
 
 .menu_hamburger-button
 	position: absolute
@@ -1356,6 +1390,16 @@ blockquote
 		color: #71CAF3
 		text-decoration: underline
 
+.submenu-conainer
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	background: rgba(255, 255, 255, 0.8)
+	backdrop-filter: blur(5px)
+	padding-top: 100px
+	z-index: 99
 
 .mobile-submenu
 	display: none
